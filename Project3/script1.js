@@ -39,12 +39,11 @@ function submitForm(){
 			errorMessage = "The ";
 			for(var i = 0; i < errorProblems.length; i++){
 				if(i == errorProblems.length-1){
-					errorMessage+="and "+errorProblems[i];
+					errorMessage+="and "+errorProblems[i]+" fields are required";
 				}else{
 					errorMessage+=errorProblems[i]+", ";
 				}
 			}
-			errorMessage+= " fields are required";
 		}
 		document.getElementById("errordiv").innerHTML = errorMessage;
 	}
