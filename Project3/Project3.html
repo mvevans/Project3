@@ -1,10 +1,10 @@
 <HTML>
 <head>
-<script src="script1.js"></script>
+<script language = "javascript" src="script1.js"></script>
 </head>
 <body>
 <div style="color:red; height:20px" id="errordiv"></div>
-<form id="userform">
+<form id="userform" action="http://www.yahoo.com" onsubmit="return validateForm( event )">
 Username: <input class="required" type="text" name="username"/><br/>
 Password1: <input class="required" type="password" name="pass1"/><br/>
 Password2: <input class="required" type="password" name="pass2"/><br/>
@@ -12,7 +12,7 @@ Email: <input class="required" type="text" name="email"/><br/>
 City: <input  type="text" name="city"/><br/>
 Zip Code: <input class="required" type="text" name="zip"/><br/>
 Phone Number: <input class="required" type="text" name="phonenumber"/><br/>
-<input id="submit" type="button" value="Submit"/>
-</form>
+<button type="submit">Submit</button>
+</form> 
 </body>
 </HTML>

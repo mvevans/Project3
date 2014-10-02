@@ -1,9 +1,9 @@
 function load(){
-	var button = document.getElementById("submit");
-	button.addEventListener('click',submitForm);
+
 }
 
-function submitForm(){
+function validateForm( event ){
+	var good = 0;
 	var badForm = 0;
 	var errorProblems = [];
 	document.getElementById("errordiv").innerHTML = "";
@@ -29,8 +29,9 @@ function submitForm(){
 		}else if(/^\d{3}\-\d{3}\s\d{4}$/.test(document.getElementsByName("phonenumber")[0].value) == false){//phone number
 			document.getElementById("errordiv").innerHTML = "The Phone Number field must have in the format xxx-xxx xxxx where all the xs are digits";
 		}else{
-			alert("good to go");
+			good = 1;
 		}
+
 	}else{
 		var errorMessage = "";
 		if(errorProblems.length == 1){
@@ -49,7 +50,9 @@ function submitForm(){
 	}
 	
 	
-	//event.prevent(default)
+	if (good == 0){
+		return false;
+	}
 }
 
 
@@ -78,4 +81,4 @@ function getProperName(name){
 	}
 }
 
-window.addEventListener('load', load);//Run code once body exists
+window.onload = load;//Run code once body exists
