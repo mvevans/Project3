@@ -1,5 +1,6 @@
+//Mark Evans
+//Project 3
 function load(){
-
 }
 
 function validateForm( event ){
@@ -49,7 +50,6 @@ function validateForm( event ){
 		document.getElementById("errordiv").innerHTML = errorMessage;
 	}
 	
-	
 	if (good == 0){
 		return false;
 	}
@@ -80,5 +80,4 @@ function getProperName(name){
 			return "ERROR";
 	}
 }
-
 window.onload = load;//Run code once body exists
